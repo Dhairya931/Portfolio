@@ -761,7 +761,6 @@ footer a:hover{
 @media(max-width:768px){
   #head{
     background: var(--secon-bg-color);
-    width: 100vw;
   }
   .menu-btn{
     display: block;
@@ -791,6 +790,9 @@ footer a:hover{
   .home{
     flex-direction: column;
     justify-content: center;
+  }
+  .home-content{
+    width: 90%;
   }
   .home-image{
     display: none;
