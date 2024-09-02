@@ -4,7 +4,6 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    scroll-behavior: smooth;
 }
 
 :root{
@@ -26,6 +25,7 @@
     0 0 150px rgba(18,247,255,0.3);
 }
 .portfolio{
+  overflow-x: hidden;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -478,15 +478,15 @@ a.btn:nth-child(2):hover::before{
     box-shadow: var(--neon-box-shadow);
   }
   .skill-bar .bar .html{
-    width: 95%;
+    width: 70%;
     animation: html 2s;
   }
   .skill-bar .bar .css{
-    width: 90%;
+    width: 60%;
     animation: css 3s;
   }
   .skill-bar .bar .javascript{
-    width: 75%;
+    width: 60%;
     animation: javascript 4s;
   }
   .skill-bar .bar .python{
@@ -502,7 +502,7 @@ a.btn:nth-child(2):hover::before{
         width: 0;
     }
     100%{
-        width: 95%;
+        width: 70%;
     }
   }
   @keyframes css {
@@ -510,7 +510,7 @@ a.btn:nth-child(2):hover::before{
         width: 0;
     }
     100%{
-        width: 90%;
+        width: 60%;
     }
   }
   @keyframes javascript {
@@ -518,7 +518,7 @@ a.btn:nth-child(2):hover::before{
         width: 0;
     }
     100%{
-        width: 75%;
+        width: 60%;
     }
   }
   @keyframes python {
@@ -761,6 +761,7 @@ footer a:hover{
 @media(max-width:768px){
   #head{
     background: var(--secon-bg-color);
+    width: 100vw;
   }
   .menu-btn{
     display: block;
@@ -769,7 +770,7 @@ footer a:hover{
   .navlist{
     display: flex;
     position: absolute;
-    top:-1001%;
+    top:-1100%;
     right:0;
     left:0;
     z-index: 10001;
@@ -785,22 +786,34 @@ footer a:hover{
     font-size: 1rem;
   }
   .navlist.open{
-    top:9%;
+    top:15%;
   }
   .home{
     flex-direction: column-reverse;
     justify-content: center;
+    padding-left: 0;
   }
   .home-content{
     width: 90%;
   }
+  .home-content h1{
+    font-size: var(--norm-font);
+  }
+  .change-text{
+    font-size: 1.2rem;
+  }
   .home-image{
     display: none;
+  }
+  .btn-box{
+    width: 250px;
+    gap:10px;
   }
   .about .img-about .pic{
     width: 250px;
   }
   .about{
+    width: 100vw;
     height: auto;
     flex-direction: column;
   }
@@ -811,9 +824,11 @@ footer a:hover{
     right:-12%;
   }
   .work-heading{
-    font-size: 60px;
+    justify-content: center;
+    font-size: 40px;
   }
   .skills{
+    width: 100vw;
     height: auto;
   }
   .skill-main{
@@ -822,12 +837,27 @@ footer a:hover{
   .work-field{
     gap:20px;
   }
+ #portfolio{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   .portfolio-gallery{
     gap:20px;
+  }
+  .port-box{
+    width: 280px;
+  }
+  footer{
+    width: 100vw;
+    padding-left:5;
+    padding-right: 5;
   }
   footer a{
     width: 40px;
     height: 40px;
     font-size: 15px;
+  }
+  footer p{
+    max-width: 60%;
   }
 }
