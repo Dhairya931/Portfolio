@@ -788,7 +788,7 @@ footer a:hover{
     top:9%;
   }
   .home{
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
   }
   .home-content{
@@ -797,9 +797,21 @@ footer a:hover{
   .home-image{
     display: none;
   }
+  .about .img-about .pic{
+    width: 250px;
+  }
   .about{
     height: auto;
     flex-direction: column;
+  }
+  .info-about1{
+    left:-20%;
+  }
+  .info-about2{
+    right:-12%;
+  }
+  .work-heading{
+    font-size: 60px;
   }
   .skills{
     height: auto;
@@ -812,5 +824,10 @@ footer a:hover{
   }
   .portfolio-gallery{
     gap:20px;
+  }
+  footer a{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
   }
 }
